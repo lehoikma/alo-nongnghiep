@@ -10,12 +10,12 @@
             <div class="mobile-title">
                 <div class="col-xs-12" style="margin-bottom: 5px; margin-top: 5px; padding: 0px">
                     <div class="row col-xs-4">
-                        <a href="{{route('detail_news_company_mobile', $value['id'])}}">
+                        <a href="{{route('detail_news_company', ['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
                             <img src="/upload/{{$value['image']}}" style="width: 100%; height:70px">
                         </a>
                     </div>
                     <div class="col-xs-8" style="padding-right: 0px">
-                        <a href="{{route('detail_news_company_mobile', $value['id'])}}">
+                        <a href="{{route('detail_news_company', ['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
                             {{$value['title']}}
                         </a><br>
                         <span class="glyphicon glyphicon-calendar" style="font-size: 12px">{{date_format(date_create($value['created_at']), 'd-m-Y')}}

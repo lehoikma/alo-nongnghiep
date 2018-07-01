@@ -15,7 +15,9 @@
         <h1 class="page-title" style="font-weight: 400; color: #38A63A">Videos</h1>
     </header>
     @foreach($videos as $video)
-        <h4>{{$video['name']}}</h4>
+        <a href="{{route('detail_video', $video['id'])}}">
+            <h4>{{$video['name']}}</h4>
+        </a>
         <div class="videos-custom" style="margin-bottom: 20px">
             {!! $video['videos'] !!}
         </div>

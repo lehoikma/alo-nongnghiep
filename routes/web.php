@@ -107,32 +107,6 @@ Route::group(['namespace' => 'User'], function () {
     Route::get('/hinh-anh', 'ImageController@listImage')->name('list_image');
 
     Route::get('/videos', 'VideosController@listVideos')->name('videos');
-    // MOBILE
-    Route::get('/list-category-product', 'NewsProductController@mobileListCategory')->name('list-category-product');
-
-    Route::get('/list-news-product/{id}', 'NewsProductController@mobileListNews')->name('list_news_product_mobile');
-
-    Route::get('/detail-news-product/{id}', 'NewsProductController@mobileDetailNews')->name('detail_news_product_mobile');
-
-
-
-    Route::get('/list-video', 'VideosController@mobileListVideos')->name('list_video_mobile');
-
-    Route::get('/detail-video/{id}', 'VideosController@mobileDetailVideo')->name('detail_video_mobile');
-
-    Route::get('/list-news', 'NewsController@mobileListNews')->name('list_news_mobile');
-
-    Route::get('/detail-news/{id}', 'NewsController@mobileDetailNews')->name('detail_news_mobile');
-
-    Route::get('/list-news-company', 'NewsCompanyController@mobileListNewsCompany')->name('list_news_company_mobile');
-
-    Route::get('/detail-news-company/{id}', 'NewsCompanyController@mobileDetailNewsCompany')->name('detail_news_company_mobile');
-
-    Route::get('/list-news-farm', 'NewsFarmController@mobileListNewsFarm')->name('list_news_farm_mobile');
-
-    Route::get('/detail-news-farm/{id}', 'NewsFarmController@mobileDetailNewsFarm')->name('detail_news_farm_mobile');
-
-    Route::get('/list-image', 'ImageController@mobileListImages')->name('list_image_mobile');
-
-    Route::get('/question', 'SupportController@mobileQuestion')->name('question');
+ 
+    Route::get('/video/{id}', 'VideosController@mobileDetailVideo')->name('detail_video');
 });

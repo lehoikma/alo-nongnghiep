@@ -20,7 +20,7 @@
             @endif
                 <span class="glyphicon glyphicon-grain"></span>
 
-                <a href="{{route('list_news_product_mobile', $ct['id'])}}">
+                <a href="{{route('list_news_products_category', $ct['id'])}}">
                     <strong style="font-size: 18px;     text-transform: uppercase;">
                          {{$ct['name']}}
                     </strong>

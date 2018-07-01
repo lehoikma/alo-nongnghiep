@@ -7,7 +7,7 @@
         <h4 style="border-bottom: 1px solid #dff0d8; padding-bottom: 10px; padding-top: 10px"><a href="/">Trang Chủ</a> > Videos</h4>
         @foreach($videos as $value)
             <div class="mobile-category-product">
-                <a href="{{route('detail_video_mobile', $value['id'])}}">
+                <a href="{{route('detail_video', $value['id'])}}">
                     <strong style="padding-bottom: 10px">
                         {{$value['name']}}
                     </strong>

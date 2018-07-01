@@ -24,7 +24,7 @@
                     <img src="/upload/{{$value['image']}}" style="width: 100%">
                 </div>
                 <div class="col-xs-8" style="padding-right: 0px">
-                    <a href="{{route('detail_news_product_mobile', $value['id'])}}">
+                    <a href="{{route('detail_news_products', ['title' => str_slug($value['title'], '-'),'id' => $value['id']])}}">
                         {{$value['title']}}
                     </a>
                     <br>

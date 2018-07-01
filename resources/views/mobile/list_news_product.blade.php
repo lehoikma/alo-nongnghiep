@@ -20,12 +20,12 @@
             @foreach($products as $prd)
                 <div class="col-xs-12" style="margin-bottom: 5px; margin-top: 5px">
                     <div class="row col-xs-4">
-                        <a href="{{route('detail_news_product_mobile', $prd['id'])}}">
+                        <a href="{{route('detail_news_products', ['title' => str_slug($prd['title'], '-'),'id' => $prd['id']])}}">
                         <img src="/upload/{{$prd['image']}}" style="width: 100%">
                         </a>
                     </div>
                     <div class="col-xs-8">
-                        <a href="{{route('detail_news_product_mobile', $prd['id'])}}">
+                        <a href="{{route('detail_news_products', ['title' => str_slug($prd['title'], '-'),'id' => $prd['id']])}}">
                             {{$prd['title']}}
                         </a><br>
                         <span class="glyphicon glyphicon-calendar" style="font-size: 12px">{{date_format(date_create($prd['created_at']), 'd-m-Y')}}
